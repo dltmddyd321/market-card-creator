@@ -17,7 +17,7 @@
 <body>
     <div class="app-container">
         <!-- Left Panel: Controls -->
-        <aside class="controls-panel">
+        <aside class="controls-panel" id="controlsPanel">
             <header>
                 <h1>App Market Card Creator <span>✨</span></h1>
                 <p>AI가 완벽한 소개 카드를 만들어드립니다.</p>
@@ -150,6 +150,14 @@
                 <span class="btn-icon">⬇️</span> 고화질 이미지 다운로드
             </button>
         </aside>
+
+        <!-- Toggle Panel Button -->
+        <button id="panelToggleBtn" class="panel-toggle-btn" title="패널 열기/닫기">
+            <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none"
+                stroke-linecap="round" stroke-linejoin="round" class="toggle-icon">
+                <polyline points="15 18 9 12 15 6"></polyline>
+            </svg>
+        </button>
 
         <!-- Right Panel: Preview -->
         <main class="preview-panel">

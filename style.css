@@ -46,6 +46,50 @@ body {
     box-shadow: var(--shadow-sm);
     z-index: 10;
     position: relative;
+    transition: margin-left 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.controls-panel.collapsed {
+    margin-left: -400px;
+}
+
+/* Panel Toggle Button */
+.panel-toggle-btn {
+    position: absolute;
+    top: 32px;
+    left: 400px;
+    /* Initially at the edge of the panel */
+    width: 36px;
+    height: 48px;
+    background-color: var(--panel-bg);
+    border: 1px solid var(--border-color);
+    border-left: none;
+    border-radius: 0 12px 12px 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-muted);
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.05);
+    z-index: 11;
+    transition: left 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.panel-toggle-btn:hover {
+    color: var(--primary);
+    background-color: #f8fafc;
+}
+
+.controls-panel.collapsed~.panel-toggle-btn {
+    left: 0;
+}
+
+.toggle-icon {
+    transition: transform 0.3s ease;
+}
+
+.controls-panel.collapsed~.panel-toggle-btn .toggle-icon {
+    transform: rotate(180deg);
 }
 
 header {

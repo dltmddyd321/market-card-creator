@@ -40,6 +40,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const previewBadgeAppStore = document.getElementById('previewBadgeAppStore');
     const previewBadgeGooglePlay = document.getElementById('previewBadgeGooglePlay');
 
+    // UI Elements
+    const controlsPanel = document.getElementById('controlsPanel');
+    const panelToggleBtn = document.getElementById('panelToggleBtn');
+
     let uploadedImageBase64 = null;
 
     // --- Real-time Preview Binding ---
@@ -121,6 +125,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     badgeAppStore.addEventListener('change', updateBadges);
     badgeGooglePlay.addEventListener('change', updateBadges);
+
+    // --- Panel Toggle ---
+    panelToggleBtn.addEventListener('click', () => {
+        controlsPanel.classList.toggle('collapsed');
+    });
 
     // --- Image Upload ---
     imageUpload.addEventListener('change', (e) => {
