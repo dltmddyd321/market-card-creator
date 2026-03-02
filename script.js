@@ -48,8 +48,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- Real-time Preview Binding ---
     function updatePreviewText() {
-        previewMainTitle.innerText = mainTitleInput.value || '사랑의 시작일,';
-        previewSubTitle.innerText = subTitleInput.value || '직관적으로 확인해요!';
+        previewMainTitle.innerText = mainTitleInput.value || '제목을 입력해주세요';
+        previewSubTitle.innerText = subTitleInput.value || '부제목을 입력해주세요';
     }
 
     function updatePreviewColors() {
